@@ -7,3 +7,13 @@ width="320" height="240">
 <form action="/prediction" method="post">
     <input type="submit" value="Prediction">
 </form>
+<button style="font-size: 25;" onclick="displayText()">Click Me</button>
+<p id="text" style="display:none;">The only thing faster than Singapore's MRT during peak hours is the way we "chope" seats with a tissue packet.
+    
+</p>
+
+<script>
+    function displayText() {
+        document.getElementById("text").style.display = "block";
+    }
+</script>
