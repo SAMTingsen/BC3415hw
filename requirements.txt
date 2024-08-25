@@ -1,3 +1,15 @@
 flask
 gunicorn
 google-generativeai
+
+Qn1: Why is prediction important across diverse fields, and how does it influence decision-making processes?
+Prediction is crucial across different fields because it’s a key part of managing risks. It uses past data to forecast possible future scenarios, 
+which helps people make informed decisions. With accurate predictions, companies can save a lot of resources by being better prepared for the changes they expect.
+
+Qn2: What methods are commonly used to evaluate the effectiveness of prediction models?
+For continuous predictions, Root Mean Square Error (RMSE) is often used. 
+RMSE measures the average magnitude of errors between predicted and actual values, giving a clear sense of how far off predictions are from the true outcomes.
+For categorical predictions, the Confusion Matrix is applied. 
+It provides a detailed breakdown of true positives, true negatives, false positives, and false negatives, which helps in assessing the model's accuracy and overall effectiveness.
+
+Qn3: What role do emerging technologies like artificial intelligence and deep learning play in advancing prediction capabilities and applications?
