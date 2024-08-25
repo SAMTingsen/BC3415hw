@@ -13,3 +13,6 @@ For categorical predictions, the Confusion Matrix is applied.
 It provides a detailed breakdown of true positives, true negatives, false positives, and false negatives, which helps in assessing the model's accuracy and overall effectiveness.
 
 Qn3: What role do emerging technologies like artificial intelligence and deep learning play in advancing prediction capabilities and applications?
+Artificial intelligence and deep learning have strong learning abilities, especially in recognizing patterns. They can assist people in making predictions by quickly sorting out 
+these patterns. For instance, in healthcare, AI and deep learning are used to analyze medical images (such as X-rays, MRIs, and CT scans) to detect patterns 
+that indicate diseases like cancer, tumors, or neurological disorders.
