@@ -1,10 +1,10 @@
 from flask import Flask,render_template,request
-import google.generativeai as palm
+import google.generativeai as genai
 import os
 
-api = os.getenv("MAKERSUITE_API_TOKEN") 
-palm.configure(api_key=api)
-model = {"model": "models/chat-bison-001"}
+api = os.getenv("MAKERSUITE")
+genai.configure(api_key=api)
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__)
 
@@ -12,19 +12,15 @@ app = Flask(__name__)
 def index():
     return(render_template("index.html"))
 
-@app.route("/financial_QA",methods=["GET","POST"])
-def financial_QA():
-    return(render_template("financial_QA.html"))
+@app.route("/financial_FAQ",methods=["GET","POST"])
+def financial_FAQ():
+    return(render_template("financial_FAQ.html"))
 
 @app.route("/makersuite",methods=["GET","POST"])
 def makersuite():
     q = request.form.get("q")
-    r = palm.chat(prompt=q, **model)
-    return(render_template("makersuite.html",r=r.last))
-
-@app.route("/predcition",methods=["GET","POST"])
-def predcition():
-    return(render_template("predcition.html"))
+    r = model.generate_content(q)
+    return(render_template("makersuite.html",r=r.text))
 
 if __name__ == "__main__":
     app.run()
