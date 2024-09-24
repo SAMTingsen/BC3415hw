@@ -12,9 +12,9 @@ app = Flask(__name__)
 def index():
     return(render_template("index.html"))
 
-@app.route("/financial_FAQ",methods=["GET","POST"])
-def financial_FAQ():
-    return(render_template("financial_FAQ.html"))
+@app.route("/financial_QA",methods=["GET","POST"])
+def financial_QA():
+    return(render_template("financial_QA.html"))
 
 @app.route("/makersuite",methods=["GET","POST"])
 def makersuite():
