@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request
 import google.generativeai as genai
 import os
+from textblob import TextBlob
 
 api = os.getenv("MAKERSUITE_API_TOKEN") 
 genai.configure(api_key=api)
@@ -21,6 +22,16 @@ def makersuite():
     q = request.form.get("q")
     r = model.generate_content(q)
     return(render_template("makersuite.html",r=r.text))
+
+@app.route("/SA",methods=["GET","POST"])
+def SA():
+    return(render_template("SA.html"))
+
+@app.route("/SAR",methods=["GET","POST"])
+def SAR():
+    q = request.form.get("q")
+    r = TextBlob(q).sentiment
+    return(render_template("SAR.html",r=r))
 
 if __name__ == "__main__":
     app.run()
